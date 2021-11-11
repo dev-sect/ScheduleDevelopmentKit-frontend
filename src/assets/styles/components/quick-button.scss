@@ -1,0 +1,11 @@
+@import "src/assets/styles/base/fonts";
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixins";
+@import "src/assets/styles/helpers/visual";
+
+.quick-button {
+    border-radius: $borderRadius;
+    @include btn-hover;
+
+    // implement-logic
+}

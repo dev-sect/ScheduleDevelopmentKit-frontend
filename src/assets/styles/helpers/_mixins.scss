@@ -1,0 +1,13 @@
+@import "variables";
+@import "visual";
+@import "src/assets/styles/base/fonts";
+
+@mixin btn-hover {
+    -webkit-transition: all 200ms $animation__template;
+    -o-transition: all 200ms $animation__template;
+    transition: all 200ms $animation__template;
+    cursor: pointer;
+}
+
+@mixin quick-btn--background($type) {
+}

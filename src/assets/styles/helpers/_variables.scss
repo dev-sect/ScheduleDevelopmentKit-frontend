@@ -1,0 +1,42 @@
+/*
+Придумал систему названия переменных:
+НАЗВАНИЕ__УТОЧНЯЮЩАЯДЕТАЛЬНАЗВАНИЯ-ТИПСВОЙСТВА--СОСТОЯНИЕ
+
+Isn't she lovely?
+*/
+
+$university__brand-color: #2543AD;
+$university__brand-color--hover: #1E3586;
+
+$background-color: white;
+$sidebar-backgroundColor: rgba(248, 248, 248, 0.46);
+$text__default-color--black: #2B3442;
+$text__default-color--gray: #ADADAD;
+
+$item__state-background--blur: #F3F3F3;
+$item__state-background--error: #DF1717;
+
+// Можно через миксин динамически подгружать нужный цвет
+$quick__btn-background-1: #C3FFEA;
+$quick__btn-background-1-hover: #88F0CB;
+
+$quick__btn-background-2: #FFD8C3;
+$quick__btn-background-2-hover: #EDBB9F;
+
+$quick__btn-background-3: #C3DBFF;
+$quick__btn-background-3-hover: #90B8F5;
+
+$quick__btn-background-4: #FFC3D2;
+$quick__btn-background-4-hover: #EA7B96;
+
+$quick__btn-background-5: #FCEABE;
+$quick__btn-background-5-hover: #F4E1AF;
+
+$quick__btn-background-6: #D8BEFC;
+$quick__btn-background-6-hover: #B18AE8;
+
+$quick__btn-background-7: #D4FFC3;
+$quick__btn-background-7-hover: #B3E3A0;
+
+$quick__btn-background-8: #1F6E43;
+$quick__btn-background-8-hover: #184B2F;
