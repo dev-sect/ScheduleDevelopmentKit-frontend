@@ -1,20 +1,20 @@
 <template>
-  <button class='button-add-teacher' v-on:click="showAlert">{{ textButton }}</button>
+    <button class='button-add-teacher' @click="showAlert">{{ textButton }}</button>
 </template>
 
 <script>
 export default {
-  name: "ButtonToAddTeacher",
-  data() {
-    return {
-      textButton: 'Добавить'
+    name: "ButtonToAddTeacher",
+    data() {
+        return {
+            textButton: 'Добавить'
+        }
+    },
+    methods: {
+        showAlert() {
+            alert("Nice, it's working...");
+        }
     }
-  },
-  methods: {
-    showAlert() {
-      alert("Nice, it's working...");
-    }
-  }
 }
 </script>
 
