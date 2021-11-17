@@ -1,0 +1,26 @@
+@import "src/assets/styles/base/fonts";
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixins";
+@import "src/assets/styles/helpers/visual";
+@import "src/assets/styles/helpers/typography";
+
+.button-add-teacher {
+  border-radius: $borderRadius;
+  @include btn-hover;
+  width: 1rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 4.2rem;
+
+  @include textPlain;
+  font-weight: bold;
+  font-size: 1rem;
+  background: $university__brand-color;
+  color: white;
+
+  &:hover {
+    background: $university__brand-color--hover;
+  }
+}
