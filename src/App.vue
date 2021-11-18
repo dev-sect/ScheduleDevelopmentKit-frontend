@@ -1,14 +1,14 @@
 <template>
-    <ButtonToAddTeacher></ButtonToAddTeacher>
+    <TeacherCard></TeacherCard>
 </template>
 
 <script>
-import ButtonToAddTeacher from './components/ButtonToAddTeacher.vue'
+import TeacherCard from "./components/TeacherCard";
 
 export default {
     name: 'App',
     components: {
-        ButtonToAddTeacher
+      TeacherCard
     }
 }
 </script>
