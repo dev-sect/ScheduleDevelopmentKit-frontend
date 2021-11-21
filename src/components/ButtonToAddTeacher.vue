@@ -1,5 +1,5 @@
 <template>
-    <button class='button-add-teacher' @click="showAlert">{{ textButton }}</button>
+    <div class='button-add-teacher' @click="showAlert">{{ textButton }}</div>
 </template>
 
 <script>
