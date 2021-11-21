@@ -16,7 +16,7 @@
 
     &:hover {
         background: $quick__btn-background-5-hover;
-        border: 0.125rem solid #2B3442;
+        border: 0.125rem solid $text__default-color--black;
         box-sizing: border-box;
     }
 }
@@ -37,39 +37,3 @@
     text-align: left;
     display: block;
 }
-
-
-//.button-of-quick-action {
-//    border-radius: $borderRadius;
-//    @include btn-hover;
-//    width: 276px;
-//    height: 99px;
-//    display: block;
-//    padding: 16px 20px;
-//    background: $quick__btn-background-5;
-//    border: 2px solid $quick__btn-background-5;
-//    box-sizing: border-box;
-//
-//    &:hover {
-//        background: $quick__btn-background-5-hover;
-//        border: 2px solid #2B3442;
-//        box-sizing: border-box;
-//    }
-//}
-//
-//
-//.name-of-block {
-//    @include textHeader;
-//    display: flex;
-//    align-items: center;
-//    font-size: 20px;
-//    text-align: left;
-//    margin-bottom: 12px;
-//}
-//
-//.main-text-of-block {
-//    @include textPlain;
-//    font-size: 12px;
-//    text-align: left;
-//    display: block;
-//}

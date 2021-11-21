@@ -1,19 +1,19 @@
 <template>
-  <span>
+  <div>
     <ButtonToAddTeacher></ButtonToAddTeacher>
-    <ButtonOfQuickAction></ButtonOfQuickAction>
-  </span>
+    <QuickAction type="Timetable"></QuickAction>
+  </div>
 </template>
 
 <script>
 import ButtonToAddTeacher from './components/ButtonToAddTeacher.vue'
-import ButtonOfQuickAction from './components/ButtonOfQuickAction.vue'
+import QuickAction from './components/ButtonOfQuickAction.vue'
 
 export default {
     name: 'App',
     components: {
         ButtonToAddTeacher,
-        ButtonOfQuickAction
+        QuickAction
     }
 }
 </script>
