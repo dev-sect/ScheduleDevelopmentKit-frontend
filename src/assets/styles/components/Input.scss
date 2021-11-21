@@ -1,0 +1,15 @@
+@import "src/assets/styles/base/fonts";
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixins";
+@import "src/assets/styles/helpers/visual";
+@import "src/assets/styles/helpers/typography";
+
+.e-mail {
+  @include input($input-width-email, $input-height-email);
+  @include textPlain();
+}
+
+.password {
+  @include input($input-width-password, $input-height-password);
+  @include textPlain;
+}
