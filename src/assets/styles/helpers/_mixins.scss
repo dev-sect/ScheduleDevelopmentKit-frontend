@@ -12,6 +12,10 @@
 @mixin quick-btn--background($type) {
 }
 
+/**
+  @param {number} InputWidth Ширина Инпута
+  @param {number} InputHeight Высота Инпута
+ */
 @mixin input($InputWidth, $InputHeight) {
   width: $InputWidth;
   background-color: #F3F3F3;

@@ -13,3 +13,12 @@
   @include input($input-width-password, $input-height-password);
   @include textPlain;
 }
+
+.phone{
+  @include input($input-width-phone, $input-height-phone);
+}
+
+.errorInput{
+  border: 2px solid $input-borderColor-error;
+  outline-color: $input-borderColor-error;
+}
