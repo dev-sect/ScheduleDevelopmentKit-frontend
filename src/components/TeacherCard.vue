@@ -1,5 +1,5 @@
 <template>
-  <div class="teacher-card" v-on:click="goToTeacher">
+  <div class="teacher-card" @:click="goToTeacher">
     <div class="teacher-full-name">{{ teacherInfo.fullName }}</div>
     <div class="teacher-info">
       <ul class="info-list">
