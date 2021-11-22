@@ -17,9 +17,18 @@ export default {
       teacherInfo: {
         fullName: "Маятин Александр Владимирович",
         contacts: {
-          isuNumber: { data: 308373, icon: require("../icons/isuNumber.svg") },
-          mail: { data: "mayatin@itmo.ru", icon: require("../icons/mail.svg") },
-          phoneNumber: { data: "+7 999 999 99 99", icon: require("../icons/phoneNumber.svg") }
+          isuNumber: {
+            data: 308373,
+            icon: require("../icons/isuNumber.svg")
+          },
+          mail: {
+            data: "mayatin@itmo.ru",
+            icon: require("../icons/mail.svg")
+          },
+          phoneNumber: {
+            data: "+7 999 999 99 99",
+            icon: require("../icons/phoneNumber.svg")
+          }
         }
       }
     }
