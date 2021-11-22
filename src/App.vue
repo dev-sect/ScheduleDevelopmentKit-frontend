@@ -16,7 +16,7 @@
 
 <script>
 import ButtonToAddTeacher from './components/ButtonToAddTeacher.vue'
-import QuickAction from './components/ButtonOfQuickAction.vue'
+import QuickAction from './components/QuickAction.vue'
 
 export default {
     name: 'App',
