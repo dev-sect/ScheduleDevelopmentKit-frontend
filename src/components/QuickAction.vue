@@ -40,7 +40,7 @@ export default {
         for (let [index, value] of Object.values(TypeCards).entries()) {
             if (this.type === value.name) {
                 this.bgColor = index + 1;
-                this.icon = require(`../icons/buttonOfQuickAction/${value.data.icon}`);
+                this.icon = require(`../assets/styles/icons/QuickAction/${value.data.icon}`);
                 this.headText = value.data.textHeading;
                 this.mainText = value.data.describeText;
             }
@@ -51,7 +51,7 @@ export default {
 
 <style scoped lang="scss">
 @import "src/assets/styles/helpers/variables";
-@import '../assets/styles/components/button-quick-action.scss';
+@import '../assets/styles/components/quick-action.scss';
 
 .button-of-quick-action {
     &_1 {

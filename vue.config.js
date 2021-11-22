@@ -1,7 +1,4 @@
 module.exports = {
-    chainWebpack: config => {
-        config.module.rules.delete("svg");
-    },
     configureWebpack: () => {
         return {
             resolve: {
@@ -15,13 +12,6 @@ module.exports = {
                             'vue-style-loader',
                             'css-loader',
                             'less-loader'
-                        ],
-                    },
-                    {
-                        test: /\.svg$/,
-                        use: [
-                            'vue-loader',
-                            'vue-svg-loader',
                         ],
                     },
                 ],
