@@ -11,18 +11,21 @@
         <QuickAction type="Export"></QuickAction>
         <QuickAction type="Import"></QuickAction>
         <QuickAction type="ImportFromISU"></QuickAction>
+        <TeacherCard></TeacherCard>
     </div>
 </template>
 
 <script>
 import ButtonToAddTeacher from './components/ButtonToAddTeacher.vue'
 import QuickAction from './components/QuickAction.vue'
+import TeacherCard from "./components/TeacherCard";
 
 export default {
     name: 'App',
     components: {
         ButtonToAddTeacher,
-        QuickAction
+        QuickAction,
+        TeacherCard
     }
 }
 </script>
