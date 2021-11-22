@@ -4,6 +4,8 @@
 @import "src/assets/styles/helpers/typography";
 
 .button-of-quick-action {
+    margin: 1rem;
+
     border-radius: $borderRadius;
     @include btn-hover;
     width: 17.25rem;
