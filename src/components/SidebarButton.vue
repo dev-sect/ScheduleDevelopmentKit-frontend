@@ -1,10 +1,4 @@
 <template>
-<!--  <button :class="['sidebar-btn', { selected: isSelected }]" @click="setSelected">-->
-<!--    <img :src="icon" alt="">-->
-<!--    <p>-->
-<!--      {{ btnText }}-->
-<!--    </p>-->
-<!--  </button>-->
   <div :class="['sidebar-btn', { selected: isSelected }]" @click="setSelected">
       <img :src="icon" alt="">
       <p>
