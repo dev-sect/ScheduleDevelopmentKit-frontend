@@ -16,8 +16,8 @@
   @param {number} InputWidth Ширина Инпута
   @param {number} InputHeight Высота Инпута
  */
-@mixin input($InputWidth, $InputHeight) {
-  width: $InputWidth;
+@mixin input() {
+  width: 520px;
   background-color: #F3F3F3;
   border-radius: 12px;
   border: 0;
@@ -25,7 +25,7 @@
   outline-color: #2543AD;
   outline-width: 3px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
-  height: $InputHeight;
+  height: 24px;
   font-size: $input-fontSize;
   font-weight: $input-fontWeight;
   line-height: $input-fontLine;
@@ -34,6 +34,6 @@
     font-size: $input-PlaceHolder-fontSize;
     font-weight: $input-PlaceHolder-fontWeight;
     line-height: $input-PlaceHolder-fontLine;
-    color: $input-PlaceHolder-color;
+    color: $text__default-color--gray;
   }
 }

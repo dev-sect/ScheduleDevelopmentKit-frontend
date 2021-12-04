@@ -41,20 +41,6 @@ $quick__btn-background-7-hover: #B3E3A0;
 $quick__btn-background-8: #1F6E43;
 $quick__btn-background-8-hover: #184B2F;
 
-$input-width-email: 520px;
-$input-height-email: 54px;
-
-$input-width-password: 520px;
-$input-height-password: 54px;
-
-$input-width-phone: 520px;
-$input-height-phone: 54px;
-
-$input-width-lastName: 520px;
-$input-height-lastName: 54px;
-
-$input-width-name: 281px;
-$input-height-name: 44px;
 
 $input-width-patronymic: 281px;
 $input-height-patronymic: 44px;
@@ -62,13 +48,23 @@ $input-height-patronymic: 44px;
 $input-fontSize: 20px;
 $input-fontWeight: 600;
 $input-fontLine: 24px;
-$input-font:'Times New Roman';
+$input-font:'SF PRO Display';
 $input-color: #2B3442;
 
 $input-PlaceHolder-fontSize: 20px;
 $input-PlaceHolder-fontWeight: 600;
 $input-PlaceHolder-fontLine: 24px;
-$input-PlaceHolder-font:'Times New Roman';
-$input-PlaceHolder-color: #ADADAD;
+$input-PlaceHolder-font:'SF PRO Display';
 
-$input-borderColor-error: red;
+
+$input-headerText-font:'Montserrat';
+$input-headerText-fontWeight:700;
+$input-headerText-fontSize:24px;
+$input-headerText-lineHeight:30px;
+$input-headerText-color:#2543AD;
+
+$input-errorText-font:'Montserrat';
+$input-errorText-fontWeight:600;
+$input-errorText-fontSize:12px;
+$input-errorText-lineHeight:15px;
+$input-errorText-color:#DF1717;

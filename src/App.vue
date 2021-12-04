@@ -1,8 +1,8 @@
 <template>
   <div class="div">
     <ButtonToAddTeacher></ButtonToAddTeacher>
-    <Input class="e-mail" placeholder="example@itmo.ru"/>
-    <Input class="password" placeholder="Ваш пароль"/>
+    <Input placeholder="example@itmo.ru" type-obj="e-mail" head-value="E-mail" error-value="Введите корректный e-mail"/>
+    <Input placeholder="Ваш пароль" type-obj="password" head-value="Пароль" errorValue="Пароль должен содержать минимум 8 символов и одну цифру"/>
   </div>
 </template>
 

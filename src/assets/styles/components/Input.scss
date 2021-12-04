@@ -17,8 +17,26 @@
 .phone{
   @include input($input-width-phone, $input-height-phone);
 }
-
+.input{
+  cursor: default;
+}
 .errorInput{
-  border: 2px solid $input-borderColor-error;
-  outline-color: $input-borderColor-error;
+  border: 2px solid $item__state-background--error;
+  outline-color: $item__state-background--error;
+}
+.errorText{
+  color: $input-errorText-color;
+  font-family: $input-errorText-font;
+  font-size: $input-errorText-fontSize;
+  font-weight: $input-errorText-fontWeight;
+  line-height: $input-errorText-lineHeight;
+  display: none;
+  padding-top: 4px;
+}
+.headInput{
+  font-family: $input-headerText-font;
+  font-weight: $input-headerText-fontWeight;
+  font-size: $input-headerText-fontSize;
+  line-height: $input-headerText-lineHeight;
+  color:$input-headerText-color;
 }
