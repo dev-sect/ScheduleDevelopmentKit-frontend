@@ -14,8 +14,6 @@
         <TeacherCard></TeacherCard>
         <SidebarButton></SidebarButton>
         <Label title="Операционные системы"></Label>
-        <Label title="ФИТиП"></Label>
-        <Label title="Фронтендер - не приговор"></Label>
     </div>
 </template>
 
