@@ -13,6 +13,9 @@
         <QuickAction type="ImportFromISU"></QuickAction>
         <TeacherCard></TeacherCard>
         <SidebarButton></SidebarButton>
+        <Label title="Операционные системы"></Label>
+        <Label title="ФИТиП"></Label>
+        <Label title="Фронтендер - не приговор"></Label>
     </div>
 </template>
 
@@ -21,6 +24,7 @@ import ButtonToAddTeacher from './components/ButtonToAddTeacher.vue'
 import QuickAction from './components/QuickAction.vue'
 import TeacherCard from "./components/TeacherCard"
 import SidebarButton from "./components/SidebarButton";
+import Label from "./components/Label";
 
 export default {
     name: 'App',
@@ -28,7 +32,8 @@ export default {
         ButtonToAddTeacher,
         QuickAction,
         TeacherCard,
-        SidebarButton
+        SidebarButton,
+        Label,
     }
 }
 </script>
