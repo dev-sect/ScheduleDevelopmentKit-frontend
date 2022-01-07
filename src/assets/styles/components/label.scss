@@ -4,15 +4,15 @@
 .label-block {
   @include textPlain;
   font-weight: bold;
+  font-size: 0.8em;
 
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px 12px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 36px;
+  padding: 0.5em 1em;
+  margin: 0.25em 0.5em;
+  border-radius: 2em;
 
   color: $label-fontColor;
   background: $label-backgroundColor;
