@@ -1,5 +1,5 @@
 <template>
-    <div class='button-of-quick-action' @click="showAlert" :class="'button-of-quick-action_' + bgColor">
+    <div class='button-of-quick-action' :class="'button-of-quick-action_' + bgColor">
         <div class="content-of-block">
             <div class="name-of-block">
                 {{ headText }}
@@ -32,9 +32,6 @@ export default {
         }
     },
     methods: {
-        showAlert() {
-            alert("Nice, it's working...");
-        }
     },
     mounted() {
         for (let [index, value] of Object.values(TypeCards).entries()) {

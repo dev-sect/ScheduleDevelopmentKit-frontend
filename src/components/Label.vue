@@ -1,18 +1,18 @@
 <template>
-  <div class="label-block">
-    {{ title }}
-  </div>
+    <div class="label-block">
+        {{ title }}
+    </div>
 </template>
 
 <script>
 export default {
-  name: "Label",
-  props: {
-    title: {
-      required: true,
-      text: String
-    }
-  },
+    name: "Label",
+    props: {
+        title: {
+            required: true,
+            text: String
+        }
+    },
 }
 </script>
 
