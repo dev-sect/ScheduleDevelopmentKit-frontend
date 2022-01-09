@@ -1,8 +1,8 @@
 <template>
   <div class="div">
     <ButtonToAddTeacher></ButtonToAddTeacher>
-    <Input type-obj="e-mail" head-value="E-mail"/>
-    <Input type-obj="password" head-value="Пароль"/>
+    <Input type-obj="e-mail"/>
+    <Input type-obj="password"/>
   </div>
 </template>
 
