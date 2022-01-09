@@ -17,18 +17,17 @@
   @param {number} InputHeight Высота Инпута
  */
 @mixin input() {
-  width: 520px;
+  width:27vw;
+  padding: 17px 24px;
   background-color: #F3F3F3;
   border-radius: 12px;
   border: 0;
-  padding-left: 24px;
   outline-color: #2543AD;
   outline-width: 3px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
-  height: 24px;
+  height: auto;
   font-size: $input-fontSize;
   font-weight: $input-fontWeight;
-  line-height: $input-fontLine;
   color: $input-color;
   &::placeholder {
     font-size: $input-PlaceHolder-fontSize;

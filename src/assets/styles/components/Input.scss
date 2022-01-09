@@ -5,38 +5,33 @@
 @import "src/assets/styles/helpers/typography";
 
 .e-mail {
-  @include input($input-width-email, $input-height-email);
+  @include input();
   @include textPlain();
 }
 
 .password {
-  @include input($input-width-password, $input-height-password);
+  @include input();
   @include textPlain;
 }
 
 .phone{
-  @include input($input-width-phone, $input-height-phone);
+  @include input();
 }
 .input{
   cursor: default;
 }
 .errorInput{
-  border: 2px solid $item__state-background--error;
   outline-color: $item__state-background--error;
 }
 .errorText{
   color: $input-errorText-color;
-  font-family: $input-errorText-font;
+  @include textPlain();
   font-size: $input-errorText-fontSize;
   font-weight: $input-errorText-fontWeight;
-  line-height: $input-errorText-lineHeight;
-  display: none;
   padding-top: 4px;
 }
 .headInput{
-  font-family: $input-headerText-font;
-  font-weight: $input-headerText-fontWeight;
+  @include textHeader();
   font-size: $input-headerText-fontSize;
-  line-height: $input-headerText-lineHeight;
   color:$input-headerText-color;
 }

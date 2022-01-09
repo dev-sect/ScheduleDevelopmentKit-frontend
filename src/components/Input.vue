@@ -1,39 +1,50 @@
 <template>
   <div>
     <div class="headInput">
-      <p> {{headValue}} </p>
+      <h3> {{headValue}} </h3>
     </div>
     <input
         :type="typeObj"
-        @keydown.enter="checkCorrectValue"
-        @change="checkCorrectValue"
         v-model="value"
-        :class='{"password": this.typeObj === "password", "e-mail": this.typeObj === "e-mail"}'>
-    <div class="errorText"> {{errorValue}}</div>
+        :placeholder="multipleTypeInput[this.typeObj].placeholder"
+        :class="[{errorInput:multipleTypeInput[this.typeObj]['regular'].test(this.value) == false}, typeInput[this.typeObj]]"
+    >
+    <div class="errorText" v-if = "multipleTypeInput[this.typeObj]['regular'].test(this.value) == false"> {{multipleTypeInput[this.typeObj].errorMessage}}</div>
   </div>
 </template>
+
 
 <script>
 export default {
   name: "Input",
-  props: ['typeObj', 'headValue', 'ClassName', 'errorValue'],
-
+  props: {
+    typeObj: String,
+    headValue: String
+  },
   data() {
     return {
-      value: '',
+      value: null,
+      typeInput: {
+       "password": "password",
+        "e-mail": "e-mail",
+        "phone": "phone"
+      },
       multipleTypeInput: {
 
         phone: {
           regular: /(\+7|8)[\s(]?(\d{3})[\s)]?(\d{3})[\s-]?(\d{2})[\s-]?(\d{2})/,
-          errorMessage: 'Введите корректный номер телефона'
+          errorMessage: 'Введите корректный номер телефона',
+          placeholder: '+79999999999',
         },
         'e-mail': {
           regular: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-          errorMessage: 'Введите корректный e-mail'
+          errorMessage: 'Введите корректный e-mail',
+          placeholder: 'example@itmo.ru',
         },
         password: {
           regular: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-          errorMessage: 'Пароль должен содержать: минимум 8 символов, хотя бы одну цифру'
+          errorMessage: 'Пароль должен содержать: минимум 8 символов, хотя бы одну цифру',
+          placeholder: 'Ваш пароль',
         }
       }
     }
@@ -46,23 +57,19 @@ export default {
       if (this.multipleTypeInput[type]['regular'].test(this.value)) {
         if (elemInput.classList.contains('errorInput')){
           elemInput.classList.remove('errorInput');
-            this.$el.querySelector('.errorText').style.display = "none";
 
         }
       } else {
-          this.$el.querySelector('.errorText').style.display = "block";
           elemInput.classList.add('errorInput');
       }
     }
-  }
-}
-/*
-В общем-то:
-phone - для телефонов
-e-mail - для почт
-password - для паролей
- */
 
+  },
+  mounted: function() {
+    Object.freeze(this.typeInput);
+  }
+
+}
 </script>
 
 <style scoped lang="scss">
