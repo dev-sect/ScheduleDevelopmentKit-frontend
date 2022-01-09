@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="app">
         <ButtonToAddTeacher></ButtonToAddTeacher>
         <QuickAction type="AddTimetable"></QuickAction>
         <QuickAction type="NewEvent"></QuickAction>
