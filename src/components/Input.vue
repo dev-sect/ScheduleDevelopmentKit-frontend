@@ -1,21 +1,21 @@
 <template>
   <div>
     <div class="headInput">
-      <h3> {{multipleTypeInput[this.typeObj]['headValue']}} </h3>
+      <h3> {{getHeadValue(this.typeObj)}} </h3>
     </div>
-    <input
-        :type="typeObj"
-        v-model="value"
-        :placeholder="multipleTypeInput[this.typeObj].placeholder"
-        :class="[classObject, typeInput[this.typeObj.toUpperCase()]]"
-    >
-    <div class="errorText" v-if = "multipleTypeInput[this.typeObj]['regular'].test(this.value) == false"> {{multipleTypeInput[this.typeObj].errorMessage}}</div>
+      <input
+          :type="typeObj"
+          v-model="value"
+          :placeholder="getPlaceHolder(this.typeObj)"
+          :class="[classObject, typeInput[this.typeObj.toUpperCase()]]"
+      >
+    <div class="errorText" v-if = "getRegular(this.typeObj).test(this.value) === false"> {{getErrorMessage(this.typeObj)}}</div>
   </div>
 </template>
 
 
 <script>
-import {inputTypes} from '@/store/enums';
+import {errorMessage, headValue, inputTypes, placeHolder, regular} from '@/store/enums';
 export default {
   name: "Input",
   props: {
@@ -28,33 +28,26 @@ export default {
     return {
       value: null,
       typeInput: inputTypes,
-      multipleTypeInput: {
-
-        phone: {
-          regular: /(\+7|8)[\s(]?(\d{3})[\s)]?(\d{3})[\s-]?(\d{2})[\s-]?(\d{2})/,
-          errorMessage: 'Введите корректный номер телефона',
-          placeholder: '+79999999999',
-          headValue: "Телефон",
-        },
-        'e-mail': {
-          regular: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-          errorMessage: 'Введите корректный e-mail',
-          placeholder: 'example@itmo.ru',
-          headValue: "E-mail"
-        },
-        password: {
-          regular: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-          errorMessage: 'Пароль должен содержать: минимум 8 символов, хотя бы одну цифру',
-          placeholder: 'Ваш пароль',
-          headValue: "Пароль"
-        }
-      },
     }
+  },
+  methods: {
+    getRegular(){
+      return regular[this.typeObj];
+    },
+    getErrorMessage(){
+      return errorMessage[this.typeObj];
+    },
+    getPlaceHolder(){
+      return placeHolder[this.typeObj];
+    },
+    getHeadValue(){
+      return headValue[this.typeObj];
+    },
   },
   computed:{
     classObject: function(){
       return {
-        errorInput: this.multipleTypeInput[this.typeObj]['regular'].test(this.value) == false,
+        errorInput: !regular[this.typeObj].test(this.value),
       }
     }
   },

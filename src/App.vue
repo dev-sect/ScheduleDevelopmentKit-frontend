@@ -1,7 +1,7 @@
 <template>
   <div class="div">
     <ButtonToAddTeacher></ButtonToAddTeacher>
-    <Input type-obj="e-mail"/>
+    <Input type-obj="email"/>
     <Input type-obj="password"/>
   </div>
 </template>
