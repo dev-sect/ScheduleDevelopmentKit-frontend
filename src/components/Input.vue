@@ -9,13 +9,13 @@
           :placeholder="getPlaceHolder(this.typeObj)"
           :class="[classObject, typeInput[this.typeObj.toUpperCase()]]"
       >
-    <div class="errorText" v-if = "getRegular(this.typeObj).test(this.value) === false"> {{getErrorMessage(this.typeObj)}}</div>
+    <div class="errorText" v-if = "!getRegular(this.typeObj).test(this.value)"> {{getErrorMessage(this.typeObj)}}</div>
   </div>
 </template>
 
 
 <script>
-import {errorMessage, headValue, inputTypes, placeHolder, regular} from '@/store/enums';
+import {errorMessage, headValue, inputTypes, placeHolder, regular} from '@/store/enums/input-data-enums';
 export default {
   name: "Input",
   props: {
