@@ -1,0 +1,48 @@
+@import "src/assets/styles/base/fonts";
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixins";
+@import "src/assets/styles/helpers/visual";
+@import "src/assets/styles/helpers/typography";
+
+.teacher-card {
+  width: 12rem;
+  height: 7.5rem;
+  border-radius: $borderRadius;
+  border: 2px solid $item__state-background--blur;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 16px;
+
+  .teacher-full-name {
+    @include textHeader;
+    font-size: 1rem;
+    line-height: 19px;
+    margin-bottom: 0.5rem;
+  }
+
+  .teacher-info {
+    @include textPlain;
+    font-size: 0.8rem;
+    color: $text__default-color--gray;
+    font-weight: 600;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @include btn-hover;
+  &:hover {
+    background-color: $item__state-background--blur;
+  }
+
+  .info-row {
+    margin-bottom: 0.1rem;
+    img {
+      margin-right: 0.5rem;
+    }
+  }
+}
