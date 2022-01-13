@@ -25,6 +25,7 @@ import QuickAction from './components/QuickAction.vue'
 import TeacherCard from "./components/TeacherCard"
 import SidebarButton from "./components/SidebarButton";
 import Label from "./components/Label";
+import Input from "./components/Input";
 
 export default {
     name: 'App',
