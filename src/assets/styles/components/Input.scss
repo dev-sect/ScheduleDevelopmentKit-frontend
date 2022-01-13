@@ -1,0 +1,37 @@
+@import "src/assets/styles/base/fonts";
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixins";
+@import "src/assets/styles/helpers/visual";
+@import "src/assets/styles/helpers/typography";
+
+.e-mail {
+  @include input();
+  @include textPlain();
+}
+
+.password {
+  @include input();
+  @include textPlain;
+}
+
+.phone{
+  @include input();
+}
+.input{
+  cursor: default;
+}
+.errorInput{
+  outline-color: $item__state-background--error;
+}
+.errorText{
+  color: $input-errorText-color;
+  @include textPlain();
+  font-size: $input-errorText-fontSize;
+  font-weight: $input-errorText-fontWeight;
+  padding-top: 4px;
+}
+.headInput{
+  @include textHeader();
+  font-size: $input-headerText-fontSize;
+  color:$input-headerText-color;
+}

@@ -3,11 +3,36 @@
 @import "src/assets/styles/base/fonts";
 
 @mixin btn-hover {
-    -webkit-transition: all 200ms $animation__template;
-    -o-transition: all 200ms $animation__template;
-    transition: all 200ms $animation__template;
-    cursor: pointer;
+  -webkit-transition: all 200ms $animation__template;
+  -o-transition: all 200ms $animation__template;
+  transition: all 200ms $animation__template;
+  cursor: pointer;
 }
 
 @mixin quick-btn--background($type) {
+}
+
+/**
+  @param {number} InputWidth Ширина Инпута
+  @param {number} InputHeight Высота Инпута
+ */
+@mixin input() {
+  width:27vw;
+  padding: 17px 24px;
+  background-color: #F3F3F3;
+  border-radius: 12px;
+  border: 0;
+  outline-color: #2543AD;
+  outline-width: 3px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+  height: auto;
+  font-size: $input-fontSize;
+  font-weight: $input-fontWeight;
+  color: $input-color;
+  &::placeholder {
+    font-size: $input-PlaceHolder-fontSize;
+    font-weight: $input-PlaceHolder-fontWeight;
+    line-height: $input-PlaceHolder-fontLine;
+    color: $text__default-color--gray;
+  }
 }

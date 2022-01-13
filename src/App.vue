@@ -14,6 +14,8 @@
         <TeacherCard></TeacherCard>
         <SidebarButton></SidebarButton>
         <Label title="Операционные системы"></Label>
+        <Input type-obj="email"/>
+        <Input type-obj="password"/>
     </div>
 </template>
 
@@ -32,6 +34,7 @@ export default {
         TeacherCard,
         SidebarButton,
         Label,
+        Input,
     }
 }
 </script>
