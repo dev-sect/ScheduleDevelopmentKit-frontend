@@ -1,26 +1,44 @@
 <template>
-  <div :class="['sidebar-btn', { selected: isSelected }]" @click="setSelected">
-      <img :src="icon" alt="">
+  <div :class="['sidebar-btn', classObject]" @click="setSelected">
+      <img :src="'../assets/styles/icons/SidebarButtons/SidebarButtonIconGrey.svg'" alt="">
       <p>
-        {{ btnText }}
-      </p>
+        {{ textButton[btnType] }}
+      </p>-
   </div>
 </template>
 
 <script>
+import {textButton, imgButton, imgButtonActive, pathButton} from '@/store/enums/sideBarButton-data-enums';
+
 export default {
   name: "SidebarButton",
+  props: {
+    btnType: {
+      type: String
+    }
+  },
   data() {
     return {
-      btnText: "Text",
-      icon: require("../assets/styles/icons/SidebarButtons/SidebarButtonIconGrey.svg"),
-      isSelected: false
+      isSelected: false,
+      textButton: textButton,
+      pathButton: pathButton,
     }
   },
   methods: {
     setSelected() {
-      this.isSelected = true
-      this.icon = require("../assets/styles/icons/SidebarButtons/SidebarButtonIcon.svg")
+      if(this.$route.path != pathButton[this.btnType]){
+        this.$router.push(pathButton[this.btnType])
+      }
+    }
+  },
+  computed: {
+    classObject: function(){
+      return {
+        selected: this.$route.path == pathButton[this.btnType],
+      }
+    },
+    imgButtonObj: function (){
+      return this.$route.path == pathButton[this.btnType] ? imgButtonActive[this.btnType] : imgButton[this.btnType];
     }
   }
 }

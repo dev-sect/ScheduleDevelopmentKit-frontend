@@ -1,8 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Main from "@/pages/Main";
+import Settings from "@/pages/Settings";
+import PagesLayout from "@/components/PagesLayout";
 Vue.use(VueRouter)
 
-const routes = [{}]
+const routes = [
+    {
+        path: '/',
+        component: PagesLayout,
+        children:[
+            {
+                path: '/',
+                name: 'main',
+                component: Main,
+            },
+            {
+                path: 'settings',
+                name: 'settings',
+                component: Settings,
+            }
+        ]
+    },
+
+]
 
 const router = new VueRouter({
     mode: 'history',
