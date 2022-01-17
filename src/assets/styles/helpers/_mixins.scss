@@ -17,10 +17,11 @@
   @param {number} InputHeight Высота Инпута
  */
 @mixin input() {
-  width:27vw;
-  padding: 17px 24px;
+  margin-top: 0.7vw;
+  width:30vw;
+  padding: 1vw 2vw;
   background-color: #F3F3F3;
-  border-radius: 12px;
+  border-radius: 0.65vw;
   border: 0;
   outline-color: #2543AD;
   outline-width: 3px;

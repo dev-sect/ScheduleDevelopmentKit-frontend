@@ -4,6 +4,11 @@
 @import "src/assets/styles/helpers/visual";
 @import "src/assets/styles/helpers/typography";
 
+h3{
+  margin: 0;
+}
+
+
 .e-mail {
   @include input();
   @include textPlain();
@@ -34,4 +39,7 @@
   @include textHeader();
   font-size: $input-headerText-fontSize;
   color:$input-headerText-color;
+  padding-left: 1.2vw;
+  width: 26vw;
+  margin: 0;
 }
