@@ -3,7 +3,7 @@
       <img :src="'../assets/styles/icons/SidebarButtons/SidebarButtonIconGrey.svg'" alt="">
       <p>
         {{ textButton[btnType] }}
-      </p>-
+      </p>
   </div>
 </template>
 

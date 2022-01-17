@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="pages">
     <Sidebar/>
     <router-view></router-view>
   </div>
@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style scoped>
-
+.pages{
+  display: flex;
+}
 </style>

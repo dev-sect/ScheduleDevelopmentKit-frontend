@@ -1,0 +1,69 @@
+@import "src/assets/styles/base/fonts";
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixins";
+@import "src/assets/styles/helpers/visual";
+@import "src/assets/styles/helpers/typography";
+
+.mainPage {
+  cursor: default !important;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.leftPart {
+  width: 48%;
+  background-color: #2543AD;
+  @include textPlain;
+  font-weight: 500;
+  color: white;
+
+  .container {
+    padding: 6vw 4.2vw 0 4.2vw;
+
+    h3 {
+      font-size: 3.7vw;
+      padding-bottom: 2.2vw;
+    }
+
+    p {
+      font-size: 1.4vw;
+    }
+
+  }
+
+}
+
+.rightPart {
+  width: 52%;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    padding-top: 6.2vh;
+
+    img {
+      width: 16vw;
+      display: flex;
+      margin: 0 auto;
+      padding-bottom: 6vw;
+    }
+
+    .Input-container {
+      width: 30vw;
+      margin: 0 auto;
+    }
+
+    .Input {
+      padding-bottom: 2.7vw;
+    }
+  }
+}

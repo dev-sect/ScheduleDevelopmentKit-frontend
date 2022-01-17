@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Main from "@/pages/Main";
 import Settings from "@/pages/Settings";
 import PagesLayout from "@/components/PagesLayout";
+import Auth from "@/pages/Auth";
 Vue.use(VueRouter)
 
 const routes = [
@@ -16,12 +17,17 @@ const routes = [
                 component: Main,
             },
             {
-                path: 'settings',
+                path: '/settings',
                 name: 'settings',
                 component: Settings,
             }
         ]
     },
+    {
+        path: '/auth',
+        name: 'auth',
+        component: Auth,
+    }
 
 ]
 
