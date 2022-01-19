@@ -5,15 +5,15 @@ const textButton = Object.freeze({
 });
 
 const imgButton = Object.freeze({
-    'main': '../assets/styles/icons/SidebarButtons/SidebarButtonIconGrey.svg',
-    'settings': '../assets/styles/icons/SidebarButtons/settings.svg',
-    'item': '../assets/styles/icons/SidebarButtons/item.svg'
+    'main': 'SidebarButtonIconGrey.svg',
+    'settings': 'settings.svg',
+    'item': 'item.svg'
 });
 
 const imgButtonActive = Object.freeze({
-    'main': '../assets/styles/icons/SidebarButtons/SidebarButtonIcon.svg',
-    'settings': './../assets/styles/icons/SidebarButtons/settingsActive.svg',
-    'item': '../../assets/styles/icons/SidebarButtons/itemActive.svg'
+    'main': 'SidebarButtonIcon.svg',
+    'settings': 'settingsActive.svg',
+    'item': '.itemActive.svg'
 });
 
 const pathButton = Object.freeze({
