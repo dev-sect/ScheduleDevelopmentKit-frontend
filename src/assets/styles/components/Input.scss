@@ -8,19 +8,9 @@ h3{
   margin: 0;
 }
 
-
-.e-mail {
+input{
   @include input();
   @include textPlain();
-}
-
-.password {
-  @include input();
-  @include textPlain;
-}
-
-.phone{
-  @include input();
 }
 .input{
   cursor: default;
