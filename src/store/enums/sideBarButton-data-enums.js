@@ -17,7 +17,7 @@ const imgButtonActive = Object.freeze({
 });
 
 const pathButton = Object.freeze({
-    'main': '/',
+    'main': '/main',
     'settings': '/settings',
     'item': '/item',
 })

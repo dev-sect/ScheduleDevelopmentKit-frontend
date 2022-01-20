@@ -41,17 +41,14 @@ export default {
       return pathButton[this.btnType];
     }
   },
-  mounted() {
-    console.log(this.imgButtonObj)
-  },
   computed: {
     classObject: function(){
       return {
-        selected: this.$route.path == this.getPathButton(),
+        selected: this.$route.path.indexOf(this.getPathButton())!=-1,
       }
     },
     imgButtonObj: function (){
-      return require(`../assets/styles/icons/SidebarButtons/${this.$route.path == this.getPathButton() ? this.getImgActiveButton() : this.getImgButton()}`)
+      return require(`../assets/styles/icons/SidebarButtons/${this.$route.path.indexOf(this.getPathButton())!=-1 ? this.getImgActiveButton() : this.getImgButton()}`)
     }
   }
 }
