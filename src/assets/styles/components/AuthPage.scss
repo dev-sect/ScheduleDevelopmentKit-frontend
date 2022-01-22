@@ -4,7 +4,7 @@
 @import "src/assets/styles/helpers/visual";
 @import "src/assets/styles/helpers/typography";
 
-.mainPage {
+.AuthPage {
   cursor: default !important;
   width: 100vw;
   height: 100vh;
@@ -19,7 +19,7 @@
   }
 }
 
-.leftPart {
+.AuthPage_leftPart {
   width: 48%;
   background-color: #2543AD;
   @include textPlain;
@@ -42,7 +42,7 @@
 
 }
 
-.rightPart {
+.AuthPage_rightPart {
   width: 52%;
   display: flex;
   justify-content: center;

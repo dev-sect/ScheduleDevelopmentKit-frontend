@@ -9,10 +9,12 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
+        name: '',
         component: PagesLayout,
+        redirect: '/main',
         children:[
             {
-                path: '/',
+                path: '/main',
                 name: 'main',
                 component: Main,
             },

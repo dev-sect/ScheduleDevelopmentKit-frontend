@@ -1,6 +1,6 @@
 <template>
-  <div class="mainPage">
-    <div class="leftPart">
+  <div class="AuthPage">
+    <div class="AuthPage_leftPart">
       <div class="container">
         <h3>
           Новое расписание для первого неклассического
@@ -10,10 +10,10 @@
         </p>
       </div>
     </div>
-    <div class="rightPart">
+    <div class="AuthPage_rightPart">
       <div class="container">
         <img :src=icon alt="">
-        <div class="Input-container">
+        <div class="AuthPage_rightPart-Input-container">
           <Input type-obj="email" class = "Input"/>
           <Input type-obj="password" class = "Input"/>
           <p>Тут появится чекбокс как только я сделаю его компонент, оказывается он не сделан(</p>
