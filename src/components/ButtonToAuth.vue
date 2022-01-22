@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import nameBtn from "@/store/enums/buttonToAuth-data-enums";
 export default {
   name: "ButtonToAuth",
   props: {
@@ -16,7 +15,10 @@ export default {
   },
   data(){
     return {
-      nameBtn: nameBtn,
+      nameBtn: {
+        reg: "Зарегистрироватся",
+        auth: "Войти"
+      }
     }
   },
   methods: {
