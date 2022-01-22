@@ -16,9 +16,6 @@ import HeaderBar from "@/components/HeaderBar";
 export default {
   name: "PagesLayout",
   components: {HeaderBar, Sidebar},
-  mounted() {
-    this.$router.push('/main')
-  }
 }
 </script>
 

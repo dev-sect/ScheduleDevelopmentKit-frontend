@@ -2,7 +2,7 @@
   <div :class="['sidebar-btn', classObject]" @click="setSelected">
       <img :src="this.imgButtonObj" alt="">
       <p>
-        {{ getTextButton() }}
+        {{ getTextButton }}
       </p>
   </div>
 </template>
@@ -24,9 +24,19 @@ export default {
   },
   methods: {
     setSelected() {
-      if(this.$route.path != this.getPathButton()){
-        this.$router.push(this.getPathButton())
+      if(this.$route.path != this.getPathButton){
+        this.$router.push(this.getPathButton)
       }
+    },
+  },
+  computed: {
+    classObject(){
+      return {
+        selected: this.$route.path == this.getPathButton,
+      }
+    },
+    imgButtonObj(){
+      return require(`../assets/styles/icons/SidebarButtons/${this.$route.path == this.getPathButton ? this.getImgActiveButton : this.getImgButton}`)
     },
     getTextButton() {
       return textButton[this.btnType];
@@ -39,19 +49,6 @@ export default {
     },
     getPathButton(){
       return pathButton[this.btnType];
-    }
-  },
-  mounted() {
-    console.log(this.imgButtonObj)
-  },
-  computed: {
-    classObject: function(){
-      return {
-        selected: this.$route.path == this.getPathButton(),
-      }
-    },
-    imgButtonObj: function (){
-      return require(`../assets/styles/icons/SidebarButtons/${this.$route.path == this.getPathButton() ? this.getImgActiveButton() : this.getImgButton()}`)
     }
   }
 }

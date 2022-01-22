@@ -9,15 +9,16 @@ const routes = [
     {
         path: '/',
         name: '',
+        redirect: '/main',
         component: PagesLayout,
         children:[
             {
-                path: 'main',
+                path: '/main',
                 name: 'main',
                 component: Main,
             },
             {
-                path: 'settings',
+                path: '/settings',
                 name: 'settings',
                 component: Settings,
             }
