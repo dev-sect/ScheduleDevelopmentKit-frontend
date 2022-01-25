@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <button @click="setStorage"> {{nameBtn[typeBtn]}} </button>
+  <div>
+    <button> {{nameBtn[typeBtn]}} </button>
   </div>
 </template>
 
@@ -11,7 +11,8 @@ export default {
     typeBtn: {
       type: String,
       required: true
-    }
+    },
+    checked: Boolean
   },
   data(){
     return {
@@ -21,12 +22,6 @@ export default {
       }
     }
   },
-  methods: {
-    setStorage() {
-      localStorage.setItem('authInfo', JSON.stringify(true));
-      this.$router.push('/')
-    }
-  }
 }
 </script>
 

@@ -21,7 +21,7 @@
 
 .AuthPage_leftPart {
   width: 48%;
-  background-color: #2543AD;
+  background-color: $university__brand-color;
   @include textPlain;
   font-weight: 500;
   color: white;
@@ -60,10 +60,75 @@
     .Input-container {
       width: 30vw;
       margin: 0 auto;
+      padding-bottom: 1.9vw;
     }
 
     .Input {
-      padding-bottom: 2.7vw;
+      &_1{
+        padding-bottom: 2.7vw;
+      }
     }
+  }
+}
+
+.checkbox {
+  @include textPlain;
+  width: 40%;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 1vw;
+  position: relative;
+  padding-bottom: 6vw;
+
+  .input{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+
+  .label{
+    padding-left: 2vw;
+
+    color: #444;
+    cursor: pointer;
+
+    &:before{
+      content: "";
+      display: block;
+      width: 1vw;
+      height: 1vw;
+
+      background-color: $university__brand-color;
+      border-radius: 3px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      transition: background .1s linear, border .1s linear;
+    }
+
+    &:after{
+      content: "";
+      display: block;
+      width: 1vw;
+      height: 1vw;
+
+      opacity: 0;
+
+      position: absolute;
+      top: 0.1vw;
+      left: 0.21vw;
+      z-index: 2;
+
+      transition: opacity .1s linear;
+    }
+  }
+  .input:checked + .label:before {
+    background-color: $university__brand-color;
+  }
+  .input:checked + .label:after {
+    opacity: 1;
   }
 }

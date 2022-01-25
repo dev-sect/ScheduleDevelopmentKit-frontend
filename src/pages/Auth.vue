@@ -13,12 +13,15 @@
     <div class="AuthPage_rightPart">
       <div class="container">
         <img :src=icon alt="">
-        <div class="AuthPage_rightPart-Input-container">
+        <div class="Input-container">
           <Input type-obj="email" class = "Input"/>
           <Input type-obj="password" class = "Input"/>
-          <p>Тут появится чекбокс как только я сделаю его компонент, оказывается он не сделан(</p>
-          <ButtonToAuth type-btn="auth"/>
         </div>
+          <div class="checkbox">
+            <input class="input" type="checkbox" id="checkbox" v-model="checkbox.state"/>
+            <label class="label" for="checkbox">Запомнить меня</label>
+          </div>
+          <ButtonToAuth type-btn="auth" :checked="checkbox.state"/>
       </div>
     </div>
   </div>
@@ -36,6 +39,9 @@ export default {
       icon: {
         type: String
       },
+      checkbox:{
+          state: false
+      }
     }
   },
   components: {
@@ -44,11 +50,19 @@ export default {
   },
   mounted() {
     this.icon = require(`../assets/styles/icons/AuthPage/ItmoLogo.svg`);
-  }
+  },
 }
 
 </script>
 
 <style scoped lang="scss">
 @import '../assets/styles/components/AuthPage.scss';
+.checkbox{
+  .label{
+    &:after{
+      background: url( "../assets/styles/icons/AuthPage/checked.svg") no-repeat;
+      background-size: 0.6vw 0.8vw;
+    }
+  }
+}
 </style>

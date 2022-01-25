@@ -9,11 +9,6 @@ export default {
     name: 'App',
     components: {
     },
-  mounted() {
-      if(this.$route.path != (JSON.parse(localStorage.getItem('authInfo')) ? '/' : '/auth')){
-        this.$router.push(JSON.parse(localStorage.getItem('authInfo')) ? '/' : '/auth');
-      }
-  }
 
 }
 </script>
