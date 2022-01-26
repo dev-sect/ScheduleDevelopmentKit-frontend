@@ -14,14 +14,14 @@
       <div class="container">
         <img :src=icon alt="">
         <div class="Input-container">
-          <Input type-obj="email" class = "Input"/>
-          <Input type-obj="password" class = "Input"/>
+          <Input type-obj="email" class="Input"/>
+          <Input type-obj="password" class="Input"/>
         </div>
-          <div class="checkbox">
-            <input class="input" type="checkbox" id="checkbox" v-model="checkbox.state"/>
-            <label class="label" for="checkbox">Запомнить меня</label>
-          </div>
-          <ButtonToAuth type-btn="auth" :checked="checkbox.state"/>
+        <div class="checkbox">
+          <input class="input" type="checkbox" id="checkbox" v-model="checkboxState"/>
+          <label class="label" for="checkbox">Запомнить меня</label>
+        </div>
+        <button> {{nameBtn["auth"]}} </button>
       </div>
     </div>
   </div>
@@ -30,7 +30,6 @@
 
 <script>
 import Input from "@/components/Input";
-import ButtonToAuth from "@/components/ButtonToAuth";
 
 export default {
   name: "Auth",
@@ -39,13 +38,14 @@ export default {
       icon: {
         type: String
       },
-      checkbox:{
-          state: false
+      checkboxState: false,
+      nameBtn: {
+        reg: "Зарегистрироватся",
+        auth: "Войти"
       }
     }
   },
   components: {
-    ButtonToAuth,
     Input
   },
   mounted() {
@@ -57,10 +57,12 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/styles/components/AuthPage.scss';
-.checkbox{
-  .label{
-    &:after{
-      background: url( "../assets/styles/icons/AuthPage/checked.svg") no-repeat;
+@import "../assets/styles/components/ButtonToAuth.scss";
+
+.checkbox {
+  .label {
+    &:after {
+      background: url("../assets/styles/icons/AuthPage/checked.svg") no-repeat;
       background-size: 0.6vw 0.8vw;
     }
   }
