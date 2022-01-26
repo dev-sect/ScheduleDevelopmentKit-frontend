@@ -2,14 +2,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from "@/pages/Main";
 import Settings from "@/pages/Settings";
-import TeacherCard from "@/components/TeacherCard";
 
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
-        name: '',
+        name: 'main',
         component: Main,
         meta: {
           name: 'Главная'

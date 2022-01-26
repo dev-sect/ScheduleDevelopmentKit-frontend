@@ -32,11 +32,11 @@ export default {
   computed: {
     classObject(){
       return {
-        selected: this.$route.path == this.getPathButton,
+        selected: this.$route.matched[0].name == this.btnType,
       }
     },
     imgButtonObj(){
-      return require(`../assets/styles/icons/SidebarButtons/${this.$route.path == this.getPathButton ? this.getImgActiveButton : this.getImgButton}`)
+      return require(`../assets/styles/icons/SidebarButtons/${this.$route.matched[0].name == this.btnType ? this.getImgActiveButton : this.getImgButton}`)
     },
     getTextButton() {
       return textButton[this.btnType];

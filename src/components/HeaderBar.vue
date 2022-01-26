@@ -26,7 +26,7 @@ export default {
       return "https://sun1-23.userapi.com/6oBSdyQn_doyOA9S4kb2eSbISxp24vIqDjdWTA/AyAz6fmJ0mo.jpg";
     },
     getTextHeader() {
-      return this.$route.matched.map(item=>{return item.meta.name}).join(' / ')
+      return this.$route.matched.map(currentRoute=>{return currentRoute.meta.name}).join(' / ')
     }
   },
 }
