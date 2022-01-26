@@ -12,23 +12,21 @@
       </div>
     </div>
     <div class="header_bottom">
-      {{this.getTextUser}}
+      {{getTextHeader}}
     </div>
   </div>
 </template>
 
 <script>
 
-import textHeader from "@/store/enums/headerBar-data-enums";
-
 export default {
   name: "HeaderBar",
   computed: {
-    getImgUserIcon: function (){
-      return JSON.parse(localStorage.getItem('userInfo')).imgSrc;
+    getImgUserIcon() {
+      return "https://sun1-23.userapi.com/6oBSdyQn_doyOA9S4kb2eSbISxp24vIqDjdWTA/AyAz6fmJ0mo.jpg";
     },
-    getTextUser: function (){
-      return this.$route.path.split('/').slice(1,this.$route.path.split('/').length).map((item)=>{return textHeader[item]}).join(' / ')
+    getTextHeader() {
+      return this.$route.matched.map(item=>{return item.meta.name}).join(' / ')
     }
   },
 }
@@ -62,12 +60,13 @@ input {
   img {
     width: 2vw;
   }
+
   margin-right: 2vw;
   cursor: pointer;
 }
 
-.preview{
-  img{
+.preview {
+  img {
     width: 4vw;
     height: 4vw;
     border-radius: 50%;
@@ -76,7 +75,7 @@ input {
   cursor: pointer;
 }
 
-.header_bottom{
+.header_bottom {
   @include textPlain;
   font-size: $input-PlaceHolder-fontSize;
   font-weight: $input-PlaceHolder-fontWeight;

@@ -2,29 +2,33 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from "@/pages/Main";
 import Settings from "@/pages/Settings";
-import PagesLayout from "@/components/PagesLayout";
+import TeacherCard from "@/components/TeacherCard";
+
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
         name: '',
-        redirect: '/main',
-        component: PagesLayout,
-        children:[
-            {
-                path: '/main',
-                name: 'main',
-                component: Main,
-            },
-            {
-                path: '/settings',
-                name: 'settings',
-                component: Settings,
-            }
-        ]
+        component: Main,
+        meta: {
+          name: 'Главная'
+        },
     },
 
+    {
+        path: '/settings',
+        name: 'settings',
+        component: Settings,
+        meta: {
+            name: "Настройки"
+        }
+    },
+    {
+        path: '*',
+        name: 'allUnnamed',
+        redirect: Main
+    }
 ]
 
 const router = new VueRouter({
