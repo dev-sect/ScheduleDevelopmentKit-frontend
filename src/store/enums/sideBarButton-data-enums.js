@@ -13,7 +13,7 @@ const imgButton = Object.freeze({
 const imgButtonActive = Object.freeze({
     main: 'SidebarButtonIcon.svg',
     settings: 'settingsActive.svg',
-    item: '.itemActive.svg'
+    item: 'itemActive.svg'
 });
 
 const pathButton = Object.freeze({

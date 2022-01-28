@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from "@/pages/Main";
 import Settings from "@/pages/Settings";
+import Auth from "@/pages/Auth";
 
 Vue.use(VueRouter)
 
@@ -14,7 +15,11 @@ const routes = [
           name: 'Главная'
         },
     },
-
+    {
+        path: '/auth',
+        name: 'auth',
+        component: Auth,
+    },
     {
         path: '/settings',
         name: 'settings',
@@ -23,11 +28,6 @@ const routes = [
             name: "Настройки"
         }
     },
-    {
-        path: '*',
-        name: 'allUnnamed',
-        redirect: Main
-    }
 ]
 
 const router = new VueRouter({
