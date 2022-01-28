@@ -2,10 +2,10 @@
     <div id="app">
       <div class="pagesLayout">
         <div class="pagesLayout_contentLeft">
-          <SideBar/>
+          <SideBar v-if = "$route.path.indexOf('/auth')==-1"/>
         </div>
         <div class="pagesLayout_contentRight">
-          <HeaderBar/>
+          <HeaderBar v-if = "$route.path.indexOf('/auth')==-1"/>
           <router-view></router-view>
         </div>
       </div>
@@ -16,6 +16,7 @@
 
 import SideBar from "@/components/SideBar";
 import HeaderBar from "@/components/HeaderBar";
+
 export default {
     name: 'App',
     components: {
