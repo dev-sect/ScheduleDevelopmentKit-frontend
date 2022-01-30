@@ -21,10 +21,12 @@
   img {
     color: $text__default-color--gray;
     fill: $text__default-color--gray;
-    margin-left: 3.7rem;
+    margin-left: 3vw;
+    height: 1.9vw;
+    width: 1.9vw;
   }
   p {
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 1vw;
   }
 }
 .selected {
