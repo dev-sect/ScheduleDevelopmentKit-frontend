@@ -2,7 +2,7 @@
   <div :class="['sidebar-btn', classObject]" @click="setSelected">
       <img :src="this.imgButtonObj" alt="">
       <p>
-        {{ getTextButton() }}
+        {{ getTextButton }}
       </p>
   </div>
 </template>
@@ -24,9 +24,19 @@ export default {
   },
   methods: {
     setSelected() {
-      if(this.$route.path != this.getPathButton()){
-        this.$router.push(this.getPathButton())
+      if(this.$route.path != this.getPathButton){
+        this.$router.push(this.getPathButton)
       }
+    },
+  },
+  computed: {
+    classObject(){
+      return {
+        selected: this.$route.matched[0].name == this.btnType,
+      }
+    },
+    imgButtonObj(){
+      return require(`../assets/styles/icons/SidebarButtons/${this.$route.matched[0].name == this.btnType ? this.getImgActiveButton : this.getImgButton}`)
     },
     getTextButton() {
       return textButton[this.btnType];
@@ -41,16 +51,6 @@ export default {
       return pathButton[this.btnType];
     }
   },
-  computed: {
-    classObject: function(){
-      return {
-        selected: this.$route.path.indexOf(this.getPathButton())!=-1,
-      }
-    },
-    imgButtonObj: function (){
-      return require(`../assets/styles/icons/SidebarButtons/${this.$route.path.indexOf(this.getPathButton())!=-1 ? this.getImgActiveButton() : this.getImgButton()}`)
-    }
-  }
 }
 </script>
 
