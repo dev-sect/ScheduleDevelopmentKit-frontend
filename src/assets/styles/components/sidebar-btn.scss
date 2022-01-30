@@ -4,12 +4,12 @@
 @import "../helpers/visual";
 
 .sidebar-btn {
-  width: 18.7rem;
-  height: 3.5rem;
+  width: 17vw;
+  height: 3vw;
   background-color: $background-color;
   @include textPlain;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25vw;
   color: $text__default-color--gray;
   display: flex;
   align-items: center;
@@ -21,10 +21,12 @@
   img {
     color: $text__default-color--gray;
     fill: $text__default-color--gray;
-    margin-left: 3.7rem;
+    margin-left: 3vw;
+    height: 1.9vw;
+    width: 1.9vw;
   }
   p {
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 1vw;
   }
 }
 .selected {
@@ -33,7 +35,7 @@
     content: "";
     border-color: $university__brand-color;
     border-style: solid;
-    border-bottom-width: 3.4rem;
+    border-bottom-width: 2.9vw;
     border-radius: 0 $borderRadius $borderRadius 0;
   }
 }
