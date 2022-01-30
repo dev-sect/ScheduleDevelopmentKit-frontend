@@ -50,7 +50,7 @@ export default {
     getPathButton(){
       return pathButton[this.btnType];
     }
-  }
+  },
 }
 </script>
 
