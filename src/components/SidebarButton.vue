@@ -1,14 +1,14 @@
 <template>
   <div :class="['sidebar-btn', classObject]" @click="setSelected">
-      <img :src="'../assets/styles/icons/SidebarButtons/SidebarButtonIconGrey.svg'" alt="">
+      <img :src="this.imgButtonObj" alt="">
       <p>
-        {{ textButton[btnType] }}
-      </p>-
+        {{ getTextButton }}
+      </p>
   </div>
 </template>
 
 <script>
-import {textButton, imgButton, imgButtonActive, pathButton} from '@/store/enums/sideBarButton-data-enums';
+import {textButton, imgButton, pathButton, imgButtonActive} from '@/store/enums/sideBarButton-data-enums';
 
 export default {
   name: "SidebarButton",
@@ -20,27 +20,37 @@ export default {
   data() {
     return {
       isSelected: false,
-      textButton: textButton,
-      pathButton: pathButton,
     }
   },
   methods: {
     setSelected() {
-      if(this.$route.path != pathButton[this.btnType]){
-        this.$router.push(pathButton[this.btnType])
-      }
-    }
-  },
-  computed: {
-    classObject: function(){
-      return {
-        selected: this.$route.path == pathButton[this.btnType],
+      if(this.$route.path != this.getPathButton){
+        this.$router.push(this.getPathButton)
       }
     },
-    imgButtonObj: function (){
-      return this.$route.path == pathButton[this.btnType] ? imgButtonActive[this.btnType] : imgButton[this.btnType];
+  },
+  computed: {
+    classObject(){
+      return {
+        selected: this.$route.matched[0].name == this.btnType,
+      }
+    },
+    imgButtonObj(){
+      return require(`../assets/styles/icons/SidebarButtons/${this.$route.matched[0].name == this.btnType ? this.getImgActiveButton : this.getImgButton}`)
+    },
+    getTextButton() {
+      return textButton[this.btnType];
+    },
+    getImgButton(){
+      return imgButton[this.btnType];
+    },
+    getImgActiveButton(){
+      return imgButtonActive[this.btnType];
+    },
+    getPathButton(){
+      return pathButton[this.btnType];
     }
-  }
+  },
 }
 </script>
 

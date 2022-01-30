@@ -1,5 +1,5 @@
 <template>
-<p>Настройки</p>
+<div></div>
 </template>
 
 <script>

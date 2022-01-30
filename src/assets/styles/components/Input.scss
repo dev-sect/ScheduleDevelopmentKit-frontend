@@ -8,6 +8,17 @@ h3{
   margin: 0;
 }
 
+
+.e-mail {
+  @include input();
+  @include textPlain();
+}
+
+.password {
+  @include input();
+  @include textPlain;
+}
+
 input{
   @include input();
   @include textPlain();
