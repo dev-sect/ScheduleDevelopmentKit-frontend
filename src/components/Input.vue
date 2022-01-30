@@ -32,22 +32,22 @@ export default {
   },
   methods: {
     getRegular(){
-      return regular[this.typeObj];
+      return regular[this.typeObj.toUpperCase()];
     },
     getErrorMessage(){
-      return errorMessage[this.typeObj];
+      return errorMessage[this.typeObj.toUpperCase()];
     },
     getPlaceHolder(){
-      return placeHolder[this.typeObj];
+      return placeHolder[this.typeObj.toUpperCase()];
     },
     getHeadValue(){
-      return headValue[this.typeObj];
+      return headValue[this.typeObj.toUpperCase()];
     },
   },
   computed:{
     classObject: function(){
       return {
-        errorInput: !regular[this.typeObj].test(this.value),
+        errorInput: !regular[this.typeObj.toUpperCase()].test(this.value),
       }
     }
   },
