@@ -19,8 +19,9 @@ h3{
   @include textPlain;
 }
 
-.phone{
+input{
   @include input();
+  @include textPlain();
 }
 .input{
   cursor: default;
