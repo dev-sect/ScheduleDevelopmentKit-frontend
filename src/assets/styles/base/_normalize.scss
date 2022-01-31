@@ -7,14 +7,6 @@ textarea {
     margin: 0;
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"],
-div:hover {
-    -webkit-appearance: button;
-}
-
 // Tables
 table {
     border-collapse: collapse;
@@ -36,8 +28,9 @@ ul {
     margin: 0;
 }
 
-button {
+button, input {
     border: 0;
     -webkit-appearance: none;
+    outline: none;
     padding: 0;
 }
