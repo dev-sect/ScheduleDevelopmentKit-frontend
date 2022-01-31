@@ -37,7 +37,7 @@ export default {
         for (let [index, value] of Object.values(TypeCards).entries()) {
             if (this.type === value.name) {
                 this.bgColor = index + 1;
-                this.icon = require(`../assets/styles/icons/QuickAction/${value.data.icon}`);
+                this.icon = require(`./src/assets/icons/QuickAction/${value.data.icon}`);
                 this.headText = value.data.textHeading;
                 this.mainText = value.data.describeText;
             }

@@ -40,7 +40,7 @@ export default {
       },
       checkboxState: false,
       nameBtn: {
-        reg: "Зарегистрироватся",
+        reg: "Зарегистрироваться",
         auth: "Войти"
       }
     }
@@ -49,7 +49,7 @@ export default {
     Input
   },
   mounted() {
-    this.icon = require(`../assets/styles/icons/AuthPage/ItmoLogo.svg`);
+    this.icon = require(`../assets/icons/AuthPage/ItmoLogo.svg`);
   },
   methods:{
     redirect(){
@@ -67,7 +67,7 @@ export default {
 .checkbox {
   .label {
     &:after {
-      background: url("../assets/styles/icons/AuthPage/checked.svg") no-repeat;
+      background: url("../assets/icons/AuthPage/checked.svg") no-repeat;
       background-size: 0.6vw 0.8vw;
     }
   }

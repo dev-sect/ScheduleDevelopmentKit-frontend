@@ -36,7 +36,7 @@ export default {
       }
     },
     imgButtonObj(){
-      return require(`../assets/styles/icons/SidebarButtons/${this.$route.matched[0].name == this.btnType ? this.getImgActiveButton : this.getImgButton}`)
+      return require(`../assets/icons/SidebarButtons/${this.$route.matched[0].name == this.btnType ? this.getImgActiveButton : this.getImgButton}`)
     },
     getTextButton() {
       return textButton[this.btnType];

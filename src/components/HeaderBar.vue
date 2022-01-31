@@ -5,7 +5,7 @@
         <input type="text" placeholder="Найдётся всё">
       </div>
       <div class="notification">
-        <img src="../assets/styles/icons/HeaderBar/Notifications.svg" alt="">
+        <img src="../assets/icons/HeaderBar/Notifications.svg" alt="">
       </div>
       <div class="preview">
         <img :src="getImgUserIcon" alt="">
@@ -49,7 +49,7 @@ input {
   height: 2.4vw;
   padding: 0.5vw 5vw;
   border-radius: 0.3vw;
-  background-image: url("../assets/styles/icons/HeaderBar/search.svg");
+  background-image: url("../assets/icons/HeaderBar/search.svg");
   background-repeat: no-repeat;
   background-position: 1.2vw;
   background-size: 1.05vw;
