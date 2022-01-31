@@ -55,5 +55,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/styles/components/sidebar-btn";
+@import "../assets/styles/components/sidebar/sidebar-btn";
 </style>

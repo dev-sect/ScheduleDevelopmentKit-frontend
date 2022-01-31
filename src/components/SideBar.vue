@@ -1,5 +1,5 @@
 <template>
-<div class="">
+<div class="sidebar">
   <SidebarButton btn-type="main"/>
   <SidebarButton btn-type="settings"/>
 </div>
@@ -13,6 +13,6 @@ name: "SideBar",
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import "src/assets/styles/components/sidebar/sidebar";
 </style>

@@ -1,12 +1,11 @@
-@import "../helpers/variables";
-@import "../helpers/typography";
-@import "../base/common";
-@import "../helpers/visual";
+@import "../../helpers/variables";
+@import "../../helpers/typography";
+@import "../../base/common";
+@import "../../helpers/visual";
 
 .sidebar-btn {
   width: 17vw;
   height: 3vw;
-  background-color: $background-color;
   @include textPlain;
   font-weight: bold;
   font-size: 1.25vw;
