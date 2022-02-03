@@ -1,0 +1,29 @@
+@import "src/assets/styles/helpers/typography";
+@import "src/assets/styles/helpers/variables";
+
+.mainPage {
+  @include textPlain;
+  color: $text__default-color--black;
+
+  h1, h3 {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 1.9vw;
+  }
+
+  h3 {
+    font-size: 1.25vw;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  flex-wrap: wrap;
+  .quickAction{
+    margin-bottom: 1.4vw;
+  }
+}

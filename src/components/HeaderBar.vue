@@ -41,6 +41,7 @@ export default {
 .header_top {
   display: flex;
   align-items: center;
+  margin-top: 0.8vw;
 }
 
 input {
