@@ -31,4 +31,8 @@ export default {
 .pagesLayout{
   display: flex;
 }
+.pagesLayout_contentRight{
+  width: 78%;
+  padding-left: 3vw;
+}
 </style>

@@ -27,11 +27,15 @@ import QuickAction from "@/components/QuickAction";
 export default {
   name: "Main",
   components: {QuickAction},
-  data(){
-    return{
-      viewContentCards: ['Timetable','Teachers','DiffTimetable'],
-      createContentCards: ['AddTimetable','NewEvent','NewCouple','Report'],
-      otherContentCards: ['Export', 'Import', 'ImportFromISU']
+  computed: {
+    viewContentCards(){
+      return ['Timetable','Teachers','DiffTimetable']
+    },
+    createContentCards(){
+      return ['AddTimetable','NewEvent','NewCouple','Report']
+    },
+    otherContentCards() {
+      return ['Export', 'Import', 'ImportFromISU']
     }
   }
 }

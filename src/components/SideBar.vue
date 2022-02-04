@@ -20,11 +20,13 @@ name: "SideBar",
   display: flex;
   height: 100vh;
   align-items: center;
-  margin-right: 3vw;
   border-right: 0.1vw solid #F3F3F3;
   background: rgba(248, 248, 248, 0.46);
 }
 .sidebar_content{
-
+  height: 80%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column
 }
 </style>

@@ -4,11 +4,13 @@
       <div class="header_top-input">
         <input type="text" placeholder="Найдётся всё">
       </div>
-      <div class="notification">
-        <img src="../assets/styles/icons/HeaderBar/Notifications.svg" alt="">
-      </div>
-      <div class="preview">
-        <img :src="getImgUserIcon" alt="">
+      <div class="right_content">
+        <div class="notification">
+          <img src="../assets/styles/icons/HeaderBar/Notifications.svg" alt="">
+        </div>
+        <div class="preview">
+          <img :src="getImgUserIcon" alt="">
+        </div>
       </div>
     </div>
     <div class="header_bottom">
@@ -42,6 +44,7 @@ export default {
   display: flex;
   align-items: center;
   margin-top: 0.8vw;
+  justify-content: space-between;
 }
 
 input {
@@ -62,7 +65,7 @@ input {
     width: 2vw;
   }
 
-  margin-right: 2vw;
+  margin-right: 3vw;
   cursor: pointer;
 }
 
@@ -75,7 +78,10 @@ input {
 
   cursor: pointer;
 }
-
+.right_content{
+  display: flex;
+  align-items: center;
+}
 .header_bottom {
   @include textPlain;
   font-size: $input-PlaceHolder-fontSize;
