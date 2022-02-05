@@ -8,8 +8,8 @@
     margin: 0;
     border-radius: 0.5vw;
     @include btn-hover;
-    width: 18.7vw;
-    height: 6.2vw;
+    width: 350px;
+    height: 120px;
     display: block;
     padding: 0.8vw 1vw;
     background: $quick__btn-background-5;
@@ -28,7 +28,7 @@
     @include textPlain;
     display: flex;
     align-items: center;
-    font-size: 1.3vw;
+    font-size: 23px;
     font-weight: 700;
     text-align: left;
     margin-bottom: 0.8vw;
@@ -39,7 +39,7 @@
 
 .main-text-of-block {
     @include textPlain;
-    font-size: 0.8vw;
+    font-size: 14px;
     font-weight: 500;
     text-align: left;
     display: block;

@@ -33,6 +33,6 @@ export default {
 }
 .pagesLayout_contentRight{
   width: 78%;
-  padding-left: 3vw;
+  padding: 0.25vw 2vw;
 }
 </style>
