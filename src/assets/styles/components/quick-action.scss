@@ -6,36 +6,41 @@
 .button-of-quick-action {
     cursor: pointer;
     margin: 0;
-    border-radius: $borderRadius;
+    border-radius: 0.5vw;
     @include btn-hover;
-    width: 17.25rem;
-    height: 6.1875rem;
+    width: 25em;
+    height: 8.25em;
     display: block;
-    padding: 1rem 1.25rem;
+    padding: 0.8vw 1vw;
     background: $quick__btn-background-5;
-    border: 0.125rem solid $quick__btn-background-5;
+    border: 0.1vw solid $quick__btn-background-5;
     box-sizing: border-box;
 
     &:hover {
         background: $quick__btn-background-5-hover;
-        border: 0.125rem solid $text__default-color--black;
+        border: 0.1vw solid $text__default-color--black;
         box-sizing: border-box;
     }
 }
 
 
 .name-of-block {
-    @include textHeader;
+    @include textPlain;
     display: flex;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 1.66em;
+    font-weight: 700;
     text-align: left;
-    margin-bottom: 12px;
+    margin-bottom: 0.8vw;
+    img{
+        width: 1.5rem;
+    }
 }
 
 .main-text-of-block {
     @include textPlain;
-    font-size: 0.75rem;
+    font-size: 1em;;
+    font-weight: 500;
     text-align: left;
     display: block;
 }
