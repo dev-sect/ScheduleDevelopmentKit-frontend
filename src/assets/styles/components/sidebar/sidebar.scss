@@ -1,0 +1,9 @@
+@import "../../helpers/variables";
+@import "../../helpers/typography";
+@import "../../base/common";
+@import "../../helpers/visual";
+
+.sidebar {
+    background: $sidebar-backgroundColor;
+    height: 100vh;
+}

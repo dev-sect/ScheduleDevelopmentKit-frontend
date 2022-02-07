@@ -29,4 +29,5 @@ name: "SideBar",
   flex-wrap: wrap;
   flex-direction: column
 }
+@import "src/assets/styles/components/sidebar/sidebar";
 </style>
