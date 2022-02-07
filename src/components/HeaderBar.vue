@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="header">
     <div class="header_top">
       <div class="header_top-input">
         <input type="text" placeholder="Найдётся всё">
@@ -57,7 +57,6 @@ input {
   background-repeat: no-repeat;
   background-position: 1.2vw;
   background-size: 1.05vw;
-  margin-right: 10vw;
 }
 
 .notification {

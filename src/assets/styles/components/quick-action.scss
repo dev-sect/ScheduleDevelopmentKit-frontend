@@ -8,8 +8,8 @@
     margin: 0;
     border-radius: 0.5vw;
     @include btn-hover;
-    width: 350px;
-    height: 120px;
+    width: 25em;
+    height: 8.25em;
     display: block;
     padding: 0.8vw 1vw;
     background: $quick__btn-background-5;
@@ -28,18 +28,18 @@
     @include textPlain;
     display: flex;
     align-items: center;
-    font-size: 23px;
+    font-size: 1.66em;
     font-weight: 700;
     text-align: left;
     margin-bottom: 0.8vw;
     img{
-        width: 1.3vw;
+        width: 1.5rem;
     }
 }
 
 .main-text-of-block {
     @include textPlain;
-    font-size: 14px;
+    font-size: 1em;;
     font-weight: 500;
     text-align: left;
     display: block;

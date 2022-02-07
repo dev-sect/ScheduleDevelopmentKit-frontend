@@ -43,4 +43,5 @@ export default {
 
 <style scoped lang="scss">
 @import "src/assets/styles/components/MainPage";
+
 </style>
