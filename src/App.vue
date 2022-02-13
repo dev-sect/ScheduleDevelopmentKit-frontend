@@ -9,7 +9,7 @@
 <!--          <router-view></router-view>-->
 <!--        </div>-->
 <!--      </div>-->
-      <Edit></Edit>
+      <Edit @change="change"></Edit>
     </div>
 </template>
 
@@ -24,6 +24,11 @@ export default {
     components: {
       Edit
     },
+    methods: {
+      change() {
+        alert('h')
+      }
+    }
 }
 </script>
 
