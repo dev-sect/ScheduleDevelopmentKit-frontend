@@ -14,8 +14,8 @@
 
 <script>
 
-import SideBar from "@/components/SideBar";
-import HeaderBar from "@/components/HeaderBar";
+ import SideBar from "@/components/SideBar";
+ import HeaderBar from "@/components/HeaderBar";
 
 export default {
   name: 'App',
