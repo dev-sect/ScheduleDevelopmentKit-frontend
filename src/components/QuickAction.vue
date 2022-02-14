@@ -1,6 +1,6 @@
 <template>
     <div class='button-of-quick-action' :class="'button-of-quick-action_' + bgColor">
-        <div class="content-of-block">
+        <div class="content-of-block" @click="alertFunc">
             <div class="name-of-block">
                 {{ headText }}
                 <img :src="icon" alt="timeTable" style="margin-left: 0.75rem;"/>
@@ -32,12 +32,15 @@ export default {
         }
     },
     methods: {
+      alertFunc(){
+        alert('Всё воркает')
+      }
     },
     mounted() {
         for (let [index, value] of Object.values(TypeCards).entries()) {
             if (this.type === value.name) {
                 this.bgColor = index + 1;
-                this.icon = require(`./src/assets/icons/QuickAction/${value.data.icon}`);
+                this.icon = require(`../assets/icons/QuickAction/${value.data.icon}`);
                 this.headText = value.data.textHeading;
                 this.mainText = value.data.describeText;
             }
