@@ -51,7 +51,7 @@ export default {
 
 input {
   @include input();
-  width: 50vw;
+  width: 52vw;
   height: 2.4vw;
   padding: 0.5vw 5vw;
   border-radius: 0.3vw;

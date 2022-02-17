@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Main from "@/pages/Main";
 import Settings from "@/pages/Settings";
 import Auth from "@/pages/Auth";
+import CreateTeacher from "@/pages/CreateTeacher";
 
 Vue.use(VueRouter)
 
@@ -12,8 +13,18 @@ const routes = [
         name: 'main',
         component: Main,
         meta: {
-          name: 'Главная'
+            name: 'Главная'
         },
+        children: [
+            {
+                path: '/createTeacher',
+                name: 'createTeacher',
+                component: CreateTeacher,
+                meta: {
+                    name: 'Создать преподавателя'
+                }
+            },
+        ]
     },
     {
         path: '/auth',
