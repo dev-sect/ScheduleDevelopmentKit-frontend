@@ -1,6 +1,6 @@
 @import "src/assets/styles/helpers/typography";
 @import "src/assets/styles/helpers/variables";
-.pageWithRouter {
+.mainPage {
   @include textPlain;
   color: $text__default-color--black;
 
@@ -28,30 +28,30 @@
 }
 
 @media screen and (max-width: 1890px) {
-  .pageWithRouter{
-    font-size: 80%;
+  .mainPage{
+    font-size: 90%;
   }
 }
 @media screen and (max-width: 1350px) {
-  .pageWithRouter{
-    font-size: 70%;
+  .mainPage{
+    font-size: 80%;
   }
 }
 
 @media screen and (max-width: 1170px) {
-  .pageWithRouter{
-    font-size: 60%;
+  .mainPage{
+    font-size: 70%;
   }
 }
 
 @media screen and (max-width: 1080px) {
-  .pageWithRouter{
-    font-size: 50%;
+  .mainPage{
+    font-size: 60%;
   }
 }
 
 @media screen and (max-width: 820px) {
-  .pageWithRouter{
-    font-size: 40%;
+  .mainPage{
+    font-size: 50%;
   }
 }

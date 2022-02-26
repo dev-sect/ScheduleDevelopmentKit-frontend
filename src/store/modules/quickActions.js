@@ -4,8 +4,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Новое расписание',
             describeText: 'Добавляет новое расписание в систему',
-            icon: 'add-timetable.svg',
-            path: '/',
+            icon: 'add-timetable.svg'
         }
     },
     NEW_EVENT: { // 2
@@ -13,8 +12,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Мероприятие',
             describeText: 'Разовое, так и спланированное',
-            icon: 'new-event.svg',
-            path: '/'
+            icon: 'new-event.svg'
         }
     },
     NEW_COUPLE: { // 3
@@ -22,8 +20,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Новая пара',
             describeText: 'Нужно добавить кабинет, преподавателя, предмет и группу',
-            icon: 'new-couple.svg',
-            path: '/'
+            icon: 'new-couple.svg'
         }
     },
     REPORT: { // 4
@@ -31,8 +28,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Репорт',
             describeText: 'Отчет для преподавателя о проводимых им парах',
-            icon: 'report.svg',
-            path: '/'
+            icon: 'report.svg'
         }
     },
     TIMETABLE: { // 5
@@ -40,8 +36,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Расписание',
             describeText: 'Можно увидеть данные о студентах и преподавателях',
-            icon: 'timetable.svg',
-            path: '/'
+            icon: 'timetable.svg'
         }
     },
     DIFF_TIMETABLE: { // 6
@@ -49,8 +44,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Дельта расписаний',
             describeText: 'Можно увидеть разницу между двумя выбранными расписаниями',
-            icon: 'diff-timetable.svg',
-            path: '/'
+            icon: 'diff-timetable.svg'
         }
     },
     TEACHERS: { // 7
@@ -58,8 +52,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Преподаватели',
             describeText: 'Выводит список преподавателей и позволяет менять их информацию',
-            icon: 'teachers.svg',
-            path: '/create/teacher'
+            icon: 'teachers.svg'
         }
     },
     EXPORT: { // 8
@@ -67,8 +60,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Экспорт пар',
             describeText: 'Можно и в Excel, и в Google таблицу',
-            icon: 'export.svg',
-            path: '/'
+            icon: 'export.svg'
         }
     },
     IMPORT: { // 9
@@ -76,8 +68,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Импорт пар',
             describeText: 'Можно из Excel, и из Google таблиц',
-            icon: 'import.svg',
-            path: '/'
+            icon: 'import.svg'
         }
     },
     IMPORT_FROM_ISU: { // 10
@@ -85,8 +76,7 @@ const TypeCards = Object.freeze({
         data: {
             textHeading: 'Импорт пар из ИСУ',
             describeText: 'Импортирует расписание с помощью ИСУ ИТМО',
-            icon: 'import.svg',
-            path: '/'
+            icon: 'import.svg'
         }
     },
 })
