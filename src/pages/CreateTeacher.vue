@@ -2,14 +2,14 @@
   <div class="createTeacher">
     <h1>Создать преподавателя</h1>
     <div class="lastName">
-      <Input type-obj="lastName"/>
+      <Input type-obj="lastname"/>
     </div>
     <div class="nameAndPatronymic">
       <div class="input_first">
         <Input type-obj="name"/>
       </div>
       <div class="input_second">
-        <Input type-obj="PATRONYMIC"/>
+        <Input type-obj="patronymic"/>
       </div>
     </div>
       <div class="email">
@@ -18,7 +18,7 @@
       <div class="phone">
         <Input type-obj="phone"/>
       </div>
-    <button class = "save"> Сохранить </button>
+    <button class="save"> Сохранить </button>
   </div>
 </template>
 
@@ -92,8 +92,7 @@ h1{
   }
 }
 .save{
-  margin: 0;
-  margin-top: 8em;
+  margin: 8em 0 0;
   padding: 1em 6em;
 }
 </style>

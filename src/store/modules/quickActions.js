@@ -59,7 +59,7 @@ const TypeCards = Object.freeze({
             textHeading: 'Преподаватели',
             describeText: 'Выводит список преподавателей и позволяет менять их информацию',
             icon: 'teachers.svg',
-            path: '/createTeacher'
+            path: '/create/teacher'
         }
     },
     EXPORT: { // 8

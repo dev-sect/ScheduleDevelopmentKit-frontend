@@ -5,19 +5,19 @@
       <div class="view">
         <h3>Просмотреть</h3>
         <div class="content">
-          <QuickAction v-for="card in viewContentCards" :key="card" :type="card" class = "quickAction"/>
+          <QuickAction v-for="card in viewContentCards" :key="card" :type="card" class="quickAction"/>
         </div>
       </div>
       <div class="create">
         <h3>Создать</h3>
         <div class="content">
-          <QuickAction v-for="card in createContentCards" :key="card" :type="card" class = "quickAction"/>
+          <QuickAction v-for="card in createContentCards" :key="card" :type="card" class="quickAction"/>
         </div>
       </div>
       <div class="other">
         <h3>Другое</h3>
         <div class="content">
-          <QuickAction v-for="card in otherContentCards" :key="card" :type="card" class = "quickAction"/>
+          <QuickAction v-for="card in otherContentCards" :key="card" :type="card" class="quickAction"/>
         </div>
       </div>
     </div>
