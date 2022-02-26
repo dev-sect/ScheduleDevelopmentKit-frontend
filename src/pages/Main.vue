@@ -1,25 +1,28 @@
 <template>
-<div class="mainPage">
-  <h1>Быстрые действия</h1>
-  <div class="view">
-    <h3>Просмотреть</h3>
-    <div class="content">
-      <QuickAction v-for="card in viewContentCards" :key="card" :type="card" class = "quickAction"/>
+  <div class="pageWithRouter">
+    <div class="mainPage" v-if="$route.path=='/'">
+      <h1>Быстрые действия</h1>
+      <div class="view">
+        <h3>Просмотреть</h3>
+        <div class="content">
+          <QuickAction v-for="card in viewContentCards" :key="card" :type="card" class="quickAction"/>
+        </div>
+      </div>
+      <div class="create">
+        <h3>Создать</h3>
+        <div class="content">
+          <QuickAction v-for="card in createContentCards" :key="card" :type="card" class="quickAction"/>
+        </div>
+      </div>
+      <div class="other">
+        <h3>Другое</h3>
+        <div class="content">
+          <QuickAction v-for="card in otherContentCards" :key="card" :type="card" class="quickAction"/>
+        </div>
+      </div>
     </div>
+    <router-view/>
   </div>
-  <div class="create">
-    <h3>Создать</h3>
-    <div class="content">
-      <QuickAction v-for="card in createContentCards" :key="card" :type="card" class = "quickAction"/>
-    </div>
-  </div>
-  <div class="other">
-    <h3>Другое</h3>
-    <div class="content">
-      <QuickAction v-for="card in otherContentCards" :key="card" :type="card" class = "quickAction"/>
-    </div>
-  </div>
-</div>
 </template>
 
 <script>
@@ -43,5 +46,4 @@ export default {
 
 <style scoped lang="scss">
 @import "src/assets/styles/components/MainPage";
-
 </style>

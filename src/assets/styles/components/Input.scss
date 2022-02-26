@@ -9,16 +9,6 @@ h3{
 }
 
 
-.e-mail {
-  @include input();
-  @include textPlain();
-}
-
-.password {
-  @include input();
-  @include textPlain;
-}
-
 input{
   @include input();
   @include textPlain();
@@ -37,7 +27,7 @@ input{
   padding-top: 4px;
 }
 .headInput{
-  @include textHeader();
+  @include textPlain();
   font-size: $input-headerText-fontSize;
   color:$input-headerText-color;
   padding-left: 1.2vw;
