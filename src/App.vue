@@ -34,7 +34,7 @@ export default {
 .pagesLayout {
   display: grid;
   width: 100%;
-  grid-template-columns: 0.1fr 1fr;
+  grid-template-columns: 0.205fr 1fr;
 }
 
 .pagesLayout_contentRight {
