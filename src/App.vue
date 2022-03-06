@@ -23,12 +23,14 @@ export default {
     HeaderBar,
     SideBar
   },
+  mounted() {
+    localStorage.setItem('isThere', "true");
+  }
 }
 </script>
 
 <style lang="scss">
 @import './assets/styles/main.scss';
-
 .pagesLayout {
   display: grid;
   width: 100%;
