@@ -1,36 +1,66 @@
 <template>
   <div>
     <div class="headInput">
-      <h3> {{getHeadValue(this.typeObj)}} </h3>
+      <h3> {{getHeadValue}} </h3>
+      <Edit v-if="checkHasChangeIcon" @change="setReadOnly"/>
     </div>
       <input
           :type="typeObj"
-          v-model="value"
-          :placeholder="getPlaceHolder(this.typeObj)"
+          :placeholder="getPlaceHolder"
+          :readOnly="this.readOnly"
+          v-model = "value"
           :class="[classObject, typeInput[this.typeObj.toUpperCase()]]"
       >
-    <div class="errorText" v-if = "!getRegular(this.typeObj).test(this.value)"> {{getErrorMessage(this.typeObj)}}</div>
+    <div class="errorText" v-if = "!getRegular.test(this.value)"> {{getErrorMessage}}</div>
   </div>
 </template>
 
 
 <script>
-import {errorMessage, headValue, inputTypes, placeHolder, regular} from '@/store/enums/input-data-enums';
+import {errorMessage, headValue, inputTypes, placeHolder, regular, hasChangeIcon} from '@/store/enums/input-data-enums';
+import Edit from "@/components/Edit";
 export default {
   name: "Input",
+  components: {Edit},
   props: {
     typeObj:{
       type: String,
       required: true
     },
+    readOnlyProps:{
+      type: String,
+      required: true
+    },
+    textContent: {
+      type: String,
+      required: true
+    }
   },
   data() {
     return {
       value: null,
       typeInput: inputTypes,
+      readOnly: this.readOnlyProps
+    }
+  },
+  mounted() {
+    if(this.readOnly){
+      this.value = this.textContent;
     }
   },
   methods: {
+    setReadOnly(){
+        this.readOnly = false;
+        document.querySelector('.name').readOnly = false
+        document.querySelector('.patronymic').readOnly = false;
+    }
+  },
+  computed:{
+    classObject: function(){
+      return {
+        errorInput: !regular[this.typeObj.toUpperCase()].test(this.value),
+      }
+    },
     getRegular(){
       return regular[this.typeObj.toUpperCase()];
     },
@@ -43,12 +73,8 @@ export default {
     getHeadValue(){
       return headValue[this.typeObj.toUpperCase()];
     },
-  },
-  computed:{
-    classObject: function(){
-      return {
-        errorInput: !regular[this.typeObj.toUpperCase()].test(this.value),
-      }
+    checkHasChangeIcon(){
+      return hasChangeIcon[this.typeObj.toUpperCase()];
     }
   },
 }

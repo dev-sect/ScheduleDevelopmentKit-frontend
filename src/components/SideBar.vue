@@ -27,7 +27,8 @@ name: "SideBar",
   height: 80%;
   justify-content: flex-start;
   flex-wrap: wrap;
-  flex-direction: column
+  flex-direction: column;
+  position: fixed;
 }
 @import "src/assets/styles/components/sidebar/sidebar";
 </style>

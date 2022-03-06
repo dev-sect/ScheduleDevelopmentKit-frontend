@@ -22,5 +22,6 @@ export default {
 <style scoped lang="scss">
 .edit-btn {
   cursor: pointer;
+  height: 2.25em;
 }
 </style>

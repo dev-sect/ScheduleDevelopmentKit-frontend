@@ -42,4 +42,13 @@ const headValue = Object.freeze({
     NAME: '',
     PATRONYMIC: ''
 })
-export {inputTypes, regular, errorMessage, placeHolder, headValue};
+
+const hasChangeIcon = Object.freeze({
+    PHONE: true,
+    EMAIL: true,
+    PASSWORD: true,
+    LASTNAME: true,
+    NAME: false,
+    PATRONYMIC: false
+})
+export {inputTypes, regular, errorMessage, placeHolder, headValue, hasChangeIcon};
