@@ -1,9 +1,9 @@
 <template>
   <div class="teacher-card" @click="goToTeacher">
-    <div class="teacher-full-name">{{ teacherInfo.fullName }}</div>
+    <div class="teacher-full-name">{{ teacherInfo.teacherInfo.fullName }}</div>
     <div class="teacher-info">
       <ul class="info-list">
-        <li class="info-row" v-for="(contact, fieldName) in teacherInfo.contacts" :key="fieldName"><img :src="contact.icon" alt="">{{ contact.data }}</li>
+        <li class="info-row" v-for="(contact, fieldName) in teacherInfo.teacherInfo.contacts" :key="fieldName"><img :src="contact.icon" alt="">{{ contact.data }}</li>
       </ul>
     </div>
   </div>
@@ -12,30 +12,15 @@
 <script>
 export default {
   name: "TeacherCard",
-  data() {
-    return {
-      teacherInfo: {
-        fullName: "Маятин Александр Владимирович",
-        contacts: {
-          isuNumber: {
-            data: 308373,
-            icon: require("../assets/icons/TeacherCard/isuNumber.svg")
-          },
-          mail: {
-            data: "mayatin@itmo.ru",
-            icon: require("../assets/icons/TeacherCard/mail.svg")
-          },
-          phoneNumber: {
-            data: "+7 999 999 99 99",
-            icon: require("../assets/icons/TeacherCard/phoneNumber.svg")
-          }
-        }
-      }
+  props: {
+    teacherInfo:{
+      required: true
     }
   },
   methods: {
     goToTeacher() {
       alert("Hello, world!")
+      console.log(this.teacherInfo.teacherInfo)
     }
   }
 }

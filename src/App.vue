@@ -28,6 +28,11 @@ export default {
 
 <style lang="scss">
 @import './assets/styles/main.scss';
+@import "./assets/styles/helpers/typography.scss";
+
+.app{
+  @include textPlain;
+}
 
 .pagesLayout {
   display: grid;
